@@ -24,7 +24,7 @@
                     </form>
                 </div>
                 <div class="nav-item">
-                    <img src="/assets/logo2.png" alt="Logotipo Raves">
+                    <a href="/"><img src="/assets/logo2.png" alt="Logotipo Raves"></a>
                 </div>
                 <div class="nav-item">
                     <i class='bx bxs-user-circle'></i>
@@ -42,13 +42,34 @@
         <div class="container">
             <nav class="nav-bar">
                 <ul>
-                    <a href=""><li>Início</li></a>
-                    <a href=""><li>Feminino</li></a>
-                    <a href=""><li>Masculino</li></a>
-                    <a href=""><li>Acessórios</li></a>
+                    <a href="/"><li>Início</li></a>
+                    <a href="/female"><li>Feminino</li></a>
+                    <a href="/male"><li>Masculino</li></a>
+                    <a href="/accessories"><li>Acessórios</li></a>
                 </ul>
             </nav>
         </div>
     </header>
+    <center>
+        <div class="container">
+            <section class="section-index-order">
+                <div class="io-item">
+                    <p><a href="/" class="index-init">Início</a> / <span class="path-page">Produtos</span></p>
+                </div>
+                <div class="io-item">
+                    <p>Classificar por</p>
+                    <select name="type_relevance" id="typeRelevance">
+                        <option value="0">Preço: Menor ao Maior</option>
+                        <option value="1">Preço: Maior ao Menor</option>
+                        <option value="2">A - Z</option>
+                        <option value="3">Z - A</option>
+                        <option value="4">Mais Novo ao Mais Antigo</option>
+                        <option value="5">Mais Antigo ao Mais Novo</option>
+                        <option value="6" selected>Mais Vendidos</option>
+                    </select>
+                </div>
+            </section>
+        </div>
+    </center>
 </body>
 </html>

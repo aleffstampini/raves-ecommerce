@@ -1,0 +1,42 @@
+
+/* SECTION INDEX ORDER
+____________________________________________________________________________ */
+
+section.section-index-order {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.io-item .index-init {
+    color: #303030;
+    transition: .5s;
+}
+
+.io-item .index-init:hover {
+    color: #750D8F;
+    text-decoration: underline;
+}
+
+.io-item:last-of-type {
+    display: flex;
+    align-items: center;    
+    flex-direction: row;
+}
+
+.io-item .path-page {
+    font-weight: 700;
+}
+
+.io-item:last-of-type p {
+    font-size: 12px;
+}
+
+.io-item select {
+    padding: 10px 10px;
+    margin-left: 20px;
+    border: 1px solid #dadada;
+}
