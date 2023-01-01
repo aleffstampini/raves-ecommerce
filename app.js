@@ -1,7 +1,10 @@
 const express = require('express');
+const path = require('path')
 const app = express();
 
-const home = '../public/pages';
+const home = '../src/app/index';
+
+app.use(express.static(__dirname + '/src/app'));
 
 app.set('view engine', 'ejs');
 
