@@ -4,7 +4,7 @@ const app = express();
 
 const home = '../src/app/index';
 
-app.use(express.static(__dirname + '/src/app'));
+app.use(express.static(__dirname + '/src'));
 
 app.set('view engine', 'ejs');
 
