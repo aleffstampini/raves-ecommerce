@@ -64,12 +64,17 @@ ____________________________________________________________________________ */
     justify-content: space-between;
 }
   
-.products-item {
+.product-item {
     width: 100%;
     height: max-content;
     cursor: pointer;
     margin-top: 30px;
+    position: relative;
     transition: .3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.1);
 }
 
 .product-bg {
@@ -78,17 +83,46 @@ ____________________________________________________________________________ */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .5s ease-in-out;
 }
 
 .product-info {
     width: 210px;
+}
+
+.product-title {
+    color: #353435;
     font-size: 14px;
-    color: #303030;
-    text-align: justify;
-    white-space: nowrap;
+    text-align: center;
+    /* white-space: nowrap; */
     text-overflow: ellipsis;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    padding-top: 10px;
+}
+
+.product-cash-price {
+    color: #51245C;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+.product-cash-price {
+    color: #51245C;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+.product-installments {
+    color: #616161;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 5px;
+    font-weight: 600;
 }
