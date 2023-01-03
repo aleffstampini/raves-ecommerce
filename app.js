@@ -1,20 +1,21 @@
 const express = require('express');
-const conn = require('./src/config/connectDatabase');
+const bodyParser = require('body-parser');
+var logger = require('morgan');
 
 const app = express();
 
-const home = '../src/app/index';
+const conn = require('./src/config/connectDatabase');
 
-app.use(express.static(__dirname + '/src'));
+const indexRouter = require('./src/routes/index');
 
+app.use(logger('dev')); 
 app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.use(express.static(__dirname + '/src/views'));
 
-app.get('/', (req, res) => res.render(home));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-app.get('/female', (req, res) => console.log('female!'));
-app.get('/male', (req, res) => console.log('male!'));
-app.get('/accessories', (req, res) => console.log('accessories!'));
-
-conn.sequelizeConnection;
+app.use('/', indexRouter);
 
 app.listen(3000, () => console.log('[init] server is running...'));
