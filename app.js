@@ -4,9 +4,8 @@ var logger = require('morgan');
 
 const app = express();
 
-const conn = require('./src/config/connectDatabase');
-
 const indexRouter = require('./src/routes/index');
+const productsRouter = require('./src/routes/products');
 
 app.use(logger('dev')); 
 app.set('view engine', 'ejs');
@@ -17,5 +16,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
+app.use('/products', productsRouter);
 
 app.listen(3000, () => console.log('[init] server is running...'));
